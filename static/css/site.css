@@ -1,0 +1,68 @@
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.intro {
+    background:url("https://www.cheatsheet.com/wp-content/uploads/2021/10/rory-gilmore-girls-stars-hollow-books.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.second {
+    background:url("https://www.cheatsheet.com/wp-content/uploads/2021/10/rory-gilmore-girls-stars-hollow-books.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.child {
+    background-color: rgb(165, 42, 42, 0.8);
+    color: white;
+    padding: 2%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.flash-msg {
+    justify-content: left;
+    align-items: top;
+}
+
+nav {
+    list-style:none;
+    margin:0;
+    padding:0;
+    /* background-color: rgb(11, 87, 17, 0.3); */
+    z-index : 10000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    text-align: right;
+    /* min-width: 664.23px; */
+}
+
+nav ul { 
+    display: block;
+    width: 100%;
+    padding: 0;
+    padding-top: 2vh;
+}
+
+nav li {
+    display:inline;
+}
+nav a {
+    display: inline-block;
+    background-color: brown;
+    border-radius: 25px;
+    color:rgb(254, 254, 254);
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-right: 2%;
+}
+
+nav a:hover{
+    background-color:rgb(200, 144, 39);
+    color:white;
+    border-radius: 25px;
+}

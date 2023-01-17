@@ -28,6 +28,9 @@
     align-items: top;
 }
 
+a {
+    color:rgb(200, 144, 39)
+}
 nav {
     list-style:none;
     margin:0;

@@ -22,3 +22,8 @@ def get_all_books():
     """Returns all books"""
 
     return Book.query.all()
+
+def add_to_ToBeReadList(book, user):
+    """Adds book to users to be read list"""
+
+    return ToBeReadList(user_id=user.user_id, book_id=book.book_id)

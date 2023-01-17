@@ -43,8 +43,17 @@ def create_account():
 
     else:
         user = crud.create_user(username=username, password=password_hashed)
+
         db.session.add(user)
         db.session.commit()
+
+        books = crud.get_all_books()
+
+        for book in books: 
+            book_folder = crud.add_to_ToBeReadList(book, user)
+            
+            db.session.add(book_folder)
+            db.session.commit()
         # session["username"] = username
 
         return redirect("/login_page")
@@ -87,7 +96,7 @@ def display_user_profile():
     # if "username" in session: 
     user_username = session["username"]
     user = crud.get_user_by_username(user_username)
-
+        
     return render_template("user_profile.html", user=user)
 
     # else:

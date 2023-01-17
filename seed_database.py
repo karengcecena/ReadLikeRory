@@ -33,17 +33,3 @@ for line in books_file:
 
 model.db.session.add_all(books_in_db)
 model.db.session.commit()
-
-# random users: 
-for n in range(10):
-    username = f'user{n}'  
-    password = 'test'
-
-    # to hash the password 
-    password_hashed = argon2.hash(password)
-
-    # create a user
-    user = crud.create_user(username, password_hashed)
-    model.db.session.add(user)
-
-model.db.session.commit()

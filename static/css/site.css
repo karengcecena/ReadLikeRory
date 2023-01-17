@@ -34,8 +34,12 @@ body {
 }
 
 .flash-msg {
-    justify-content: left;
-    align-items: top;
+    position: fixed;
+    display: block;
+    margin-bottom: 18%;
+    background-color: rgb(165, 42, 42, 0.8);
+    padding: 0.5%;
+    border-radius: 10px;
 }
 
 a {

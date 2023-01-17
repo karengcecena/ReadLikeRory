@@ -50,7 +50,7 @@ def create_account():
         books = crud.get_all_books()
 
         for book in books: 
-            book_folder = crud.add_to_ToBeReadList(book, user)
+            book_folder = crud.add_to_ToBeReadList(book.book_id, user)
             
             db.session.add(book_folder)
             db.session.commit()
@@ -93,14 +93,58 @@ def login_user():
 def display_user_profile():
     """Displays the user profile page"""
     
-    # if "username" in session: 
     user_username = session["username"]
     user = crud.get_user_by_username(user_username)
-        
-    return render_template("user_profile.html", user=user)
 
-    # else:
-    #     return redirect("/")
+    count = 0 
+
+    for book in crud.get_all_ReadList(user):
+        count += 1
+        
+    percent = (count/86)*100
+    return render_template("user_profile.html", user=user, percent=int(percent))
+
+@app.route("/user_profile/read", methods=["POST"])
+def remove_from_to_be_read():
+    """Removes from to be read and adds to read"""
+
+    book_id = request.form.get("book_id")
+
+    user_username = session["username"]
+    user = crud.get_user_by_username(user_username)
+
+    # remove from to be read list
+    book_list = crud.get_ToBeReadList_book_by_id(book_id, user)
+    db.session.delete(book_list)
+    db.session.commit()
+
+    # add to read list
+    book_list = crud.add_to_ReadList(book_id, user)
+    db.session.add(book_list)
+    db.session.commit()
+
+    return redirect("/user_profile")
+
+@app.route("/user_profile/unread", methods=["POST"])
+def remove_from_read():
+    """Removes from read and adds to to be read"""
+
+    book_id = request.form.get("book_id")
+
+    user_username = session["username"]
+    user = crud.get_user_by_username(user_username)
+
+    # remove from read list
+    book_list = crud.get_ReadList_book_by_id(book_id, user)
+    db.session.delete(book_list)
+    db.session.commit()
+
+    # add to to be read list
+    book_list = crud.add_to_ToBeReadList(book_id, user)
+    db.session.add(book_list)
+    db.session.commit()
+
+    return redirect("/user_profile")
 
 @app.route("/logout")
 def logout_user():

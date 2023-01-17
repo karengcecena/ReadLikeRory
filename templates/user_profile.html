@@ -11,11 +11,24 @@
 
 <body class="alt_parent second">
 
-    <div class="row title"> <h1>{{user.username}}'s reading progress</h1></div>
+    <div class="row title"> 
+        <h1 class="col-10">{{user.username}}'s reading progress</h1>
+        
+        <div class="col-2">
+            <div>
+                <progress value = {{percent}} max = "100"/>
+            </div>
+
+            <div class="row">
+                <p>{{percent}}%</p>
+            </div>
+        </div>
+
+    </div>
 
     <div class="alt_child">
 
-        <h2 class="row list">Rory's Reading List - To Be Read: </h2>
+        <h2 class="row list">To Be Read: </h2>
 
         <div class="row to_be_read">
             <div class="scrollmenu">
@@ -24,13 +37,16 @@
                     <div class="book_title">{{ book.title }}</div>
                     <img class="poster_img" src="{{ book.poster_path }}">
                     <div class="author_name">By: {{ book.author }}</div>
-                    <button type="button" class="read-btn" value="{{ book.book_id }}">Mark as Read</button>
+                    <form action="/user_profile/read" method="POST">
+                        <input type="hidden" id="{{book.book_id}}" name="book_id" value="{{book.book_id}}">
+                        <button type="submit" class="read-btn">Mark as Read</button>
+                    </form>
                 </div>
                 {% endfor %}
             </div>
         </div>
 
-        <h2 class="row list">Rory's Reading List - Read: </h2>
+        <h2 class="row list">Read: </h2>
 
         <div class="row read">
             <div class="scrollmenu">
@@ -39,7 +55,10 @@
                     <div class="book_title">{{ book.title }}</div>
                     <img class="poster_img" src="{{ book.poster_path }}">
                     <div class="author_name">By: {{ book.author }}</div>
-                    <button type="button" class="unread-btn" value="{{ rating.rating_id }}">Remove from Read</button>
+                    <form action="/user_profile/unread" method="POST">
+                        <input type="hidden" id="{{book.book_id}}" name="book_id" value="{{book.book_id}}">
+                        <button type="submit" class="unread-btn">Remove from Read</button>
+                    </form>
                 </div>
                 {% endfor %}
             </div>

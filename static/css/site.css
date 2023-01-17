@@ -5,23 +5,17 @@
     min-height: 100vh;
 }
 
-/* .alt_parent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-} */
-
 .intro {
     background:url("https://www.cheatsheet.com/wp-content/uploads/2021/10/rory-gilmore-girls-stars-hollow-books.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
 .second {
-    background:url("https://www.cheatsheet.com/wp-content/uploads/2021/10/rory-gilmore-girls-stars-hollow-books.jpg") no-repeat center center fixed;
+    background:linear-gradient(rgba( 0, 0, 0, 0.5), rgba( 0, 0, 0, 0.5)), url("https://images.pexels.com/photos/235767/pexels-photo-235767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") no-repeat center center fixed;
     background-size: cover;
     padding:2%;
 }
+
 
 body {
     color: white;
@@ -29,10 +23,9 @@ body {
 
 .child {
     background-color: rgb(165, 42, 42, 0.8);
-    /* background-color: rgba(26, 12, 41, 0.697); */
     color: white;
     padding: 2%;
-    border-radius: 5px;
+    border-radius: 25px;
     text-align: center;
 }
 
@@ -52,13 +45,11 @@ nav {
     list-style:none;
     margin:0;
     padding:0;
-    /* background-color: rgb(11, 87, 17, 0.3); */
     z-index : 10000;
     position: fixed;
     width: 100%;
     top: 0;
     text-align: right;
-    /* min-width: 664.23px; */
 }
 
 nav ul { 
@@ -99,25 +90,26 @@ nav a:hover{
     text-align: center;
     padding: 14px;
     text-decoration: none;
+    border-radius: 25px;
 }
 
 .scrollmenu > .col:hover {
     background-color: rgb(165, 42, 42, 0.8);
+    transform: scale(1.1); 
 }
 
 img {
     display: inline-block;
     position: relative;
-    /* max-height: 13vh; */
     height: 196px;
     width: 125px;
 }
 
 .book_card {
-    background-color: rgba(51, 51, 51, 0.95);
+    background-color: rgba(195, 138, 91, 0.7);
     border-radius: 5px;
     width: 191px;
-    height: 300px;
+    height: 330px;
     display: inline-block;
 
 }
@@ -130,11 +122,6 @@ img {
     color: white ;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
-    line-height: 16px;    
-    max-height: 32px;  
-    min-height: 32px;  
-    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
 
@@ -142,29 +129,45 @@ img {
     color: white ;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
-    line-height: 16px;    
-    max-height: 32px;  
-    min-height: 32px;  
-    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
 
 .title {
-    text-align: center;
     background-color: rgb(165, 42, 42);
+    border-radius: 15px;
     margin-top: 7vh;
 }
 
 .list {
     background-color: rgb(165, 42, 42);
+    border-radius: 15px;
     margin: 2%;
+    padding: 0.5%;
+    padding-left: 2%;
 }
-/* .book_card_edit_lists {
-    background-color: rgba(51, 51, 51, 0.95);
-    border-radius: 5px;
-    width: 191px;
-    height: 350px;
-    display: inline-block;
 
-} */
+button {
+    background-color: rgb(165, 42, 42);
+    border-radius: 15px;
+    border-color: rgba(148, 84, 92, 0.5);
+    color: white;
+}
+
+button:hover{
+    background-color: rgba(195, 138, 91);
+    border-color: rgba(148, 84, 92, 0.5);
+}
+
+progress {
+    border: rgb(250, 151, 70);
+    width: 130px;
+    height: 15px;
+  }
+
+progress::-webkit-progress-value {
+background: rgb(250, 151, 70);
+}
+
+progress::-webkit-progress-bar {
+background: rgb(255, 255, 255);
+}

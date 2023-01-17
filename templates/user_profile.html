@@ -9,16 +9,41 @@
       </ul>
 </nav>
 
-<body class="parent second">
+<body class="alt_parent second">
 
-    <div class="child">
+    <div class="row title"> <h1>{{user.username}}'s reading progress</h1></div>
 
-        {% for book in user.to_be_read_list %}
-            <div>{{ book.title }}</div>
-            <div>{{ book.author }}</div>
-            <img src="{{ book.poster_path }}">
+    <div class="alt_child">
 
-        {% endfor %}
+        <h2 class="row list">Rory's Reading List - To Be Read: </h2>
+
+        <div class="row to_be_read">
+            <div class="scrollmenu">
+                {% for book in user.to_be_read_list %}
+                <div class="col book_card" id="{{book.book_id}}">
+                    <div class="book_title">{{ book.title }}</div>
+                    <img class="poster_img" src="{{ book.poster_path }}">
+                    <div class="author_name">By: {{ book.author }}</div>
+                    <button type="button" class="read-btn" value="{{ book.book_id }}">Mark as Read</button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <h2 class="row list">Rory's Reading List - Read: </h2>
+
+        <div class="row read">
+            <div class="scrollmenu">
+                {% for book in user.read_list %}
+                <div class="col book_card" id="{{book.book_id}}">
+                    <div class="book_title">{{ book.title }}</div>
+                    <img class="poster_img" src="{{ book.poster_path }}">
+                    <div class="author_name">By: {{ book.author }}</div>
+                    <button type="button" class="unread-btn" value="{{ rating.rating_id }}">Remove from Read</button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
         
     </div>
 

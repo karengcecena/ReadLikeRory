@@ -5,6 +5,13 @@
     min-height: 100vh;
 }
 
+/* .alt_parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+} */
+
 .intro {
     background:url("https://www.cheatsheet.com/wp-content/uploads/2021/10/rory-gilmore-girls-stars-hollow-books.jpg") no-repeat center center fixed;
     background-size: cover;
@@ -13,14 +20,24 @@
 .second {
     background:url("https://www.cheatsheet.com/wp-content/uploads/2021/10/rory-gilmore-girls-stars-hollow-books.jpg") no-repeat center center fixed;
     background-size: cover;
+    padding:2%;
+}
+
+body {
+    color: white;
 }
 
 .child {
     background-color: rgb(165, 42, 42, 0.8);
+    /* background-color: rgba(26, 12, 41, 0.697); */
     color: white;
     padding: 2%;
     border-radius: 5px;
     text-align: center;
+}
+
+.alt_child {
+    background-color: rgb(165, 42, 42, 0);
 }
 
 .flash-msg {
@@ -69,3 +86,85 @@ nav a:hover{
     color:white;
     border-radius: 25px;
 }
+
+/* scroll code adapted from https://www.w3schools.com/howto/howto_css_menu_horizontal_scroll.asp */
+.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+    padding: 2%;
+  }
+  
+.scrollmenu > .col {
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.scrollmenu > .col:hover {
+    background-color: rgb(165, 42, 42, 0.8);
+}
+
+img {
+    display: inline-block;
+    position: relative;
+    /* max-height: 13vh; */
+    height: 196px;
+    width: 125px;
+}
+
+.book_card {
+    background-color: rgba(51, 51, 51, 0.95);
+    border-radius: 5px;
+    width: 191px;
+    height: 300px;
+    display: inline-block;
+
+}
+
+.book_card:hover {
+    background-color: rgb(165, 42, 42);
+}
+
+.book_title {
+    color: white ;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;    
+    max-height: 32px;  
+    min-height: 32px;  
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.author_name {
+    color: white ;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;    
+    max-height: 32px;  
+    min-height: 32px;  
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.title {
+    text-align: center;
+    background-color: rgb(165, 42, 42);
+    margin-top: 7vh;
+}
+
+.list {
+    background-color: rgb(165, 42, 42);
+    margin: 2%;
+}
+/* .book_card_edit_lists {
+    background-color: rgba(51, 51, 51, 0.95);
+    border-radius: 5px;
+    width: 191px;
+    height: 350px;
+    display: inline-block;
+
+} */

@@ -83,7 +83,6 @@ You can now navigate to 'localhost:5000/' to access ReadLikeRory.
 A new user can create an account which automatically populates that users To Be Read List with Rory Gilmore's (actual) Read List in the show Gilmore Girls. Creating an account utilizes password hashing to maintain user security. 
 
 
-
 ![alt text](https://github.com/karengcecena/project-movie-app/blob/main/static/img/video2a.gif "ReadLikeRory Profile Page")
 
 After creating an account, a user can log in and see their profile. 

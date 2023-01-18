@@ -82,12 +82,14 @@ You can now navigate to 'localhost:5000/' to access ReadLikeRory.
 
 A new user can create an account which automatically populates that users To Be Read List with Rory Gilmore's (actual) Read List in the show Gilmore Girls. Creating an account utilizes password hashing to maintain user security. 
 
+<br>
 
 ![alt text](https://github.com/karengcecena/ReadLikeRory/blob/main/static/img/video2a.gif "ReadLikeRory Profile Page")
 
-After creating an account, a user can log in and see their profile. 
+After creating an account, a user can log in and see their profile. In their profile, a user can add the books they have already read to their Read List via the "Mark as Read" button. This will remove the book from the TBR list and add it below. 
 
+<br>
 
 ![alt text](https://github.com/karengcecena/ReadLikeRory/blob/main/static/img/video2b.gif "ReadLikeRory Profile Page Progress Bar")
 
-In their profile, a user can add the books they have already read to their Read List via the "Mark as Read" button. This will remove the book from the TBR list and add it below. Similarly, users can remove books they have read if they want to re-read it. A user's reading progress is tracked above so the user knows how close they are to completing the ReadLikeRory challenge.
+Similarly, users can remove books they have read if they want to re-read it. A user's reading progress is tracked above so the user knows how close they are to completing the ReadLikeRory challenge.

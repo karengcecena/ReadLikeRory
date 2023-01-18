@@ -90,4 +90,4 @@ After creating an account, a user can log in and see their profile.
 
 ![alt text](https://github.com/karengcecena/project-movie-app/blob/main/static/img/video2b.gif "ReadLikeRory Profile Page Progress Bar")
 
-In their profile, a user can add the books they have already read to their Read List via the "Mark as Read" button. This will remove the book from the TBR list and add it below. Similarly, users can remove books they have read if they want to re-read it. A user's reading progress is tracked above so the user knows how close they are to completing the ReadLikeRory challenge.  
+In their profile, a user can add the books they have already read to their Read List via the "Mark as Read" button. This will remove the book from the TBR list and add it below. Similarly, users can remove books they have read if they want to re-read it. A user's reading progress is tracked above so the user knows how close they are to completing the ReadLikeRory challenge.

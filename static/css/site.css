@@ -169,9 +169,23 @@ progress {
   }
 
 progress::-webkit-progress-value {
-background: rgb(250, 151, 70);
+    background: rgb(250, 151, 70);
 }
 
 progress::-webkit-progress-bar {
-background: rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
+}
+
+.input_btn {
+    background-color: rgb(234, 234, 234);
+    color: black;
+    border-color: rgb(109, 109, 109);
+    fon
+}
+
+@media screen and (max-width: 991px) {
+    .title {
+        margin-top: 70px;
+        text-align: center;
+    }
 }

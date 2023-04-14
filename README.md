@@ -14,7 +14,9 @@
 
 ## 🌐 <a name="deployment"></a>Deployment
 
-Check out ReadLikeRory's [Live Site](http://34.217.109.198/)
+Deployed using AWS Lightsail
+
+Check out ReadLikeRory's [Website](http://34.217.109.198/)
 
 
 ## 🪐 <a name="aboutme"></a>About the Developer

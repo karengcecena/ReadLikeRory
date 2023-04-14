@@ -9,6 +9,7 @@
 * [About the Developer](#aboutme)
 * [Tech Stack](#technologies)
 * [Features](#features)
+* [Database Model](#databasemodel)
 * [Installation](#installation)
 
 
@@ -55,6 +56,11 @@ After creating an account, a user can log in and see their profile. In their pro
 ![alt text](https://github.com/karengcecena/ReadLikeRory/blob/main/static/img/video2b.gif "ReadLikeRory Profile Page Progress Bar")
 
 Similarly, users can remove books they have read if they want to re-read it. A user's reading progress is tracked above so the user knows how close they are to completing the ReadLikeRory challenge.
+
+
+## 🗂️ <a name="databasemodel"></a>Database Model
+
+![alt text](https://github.com/karengcecena/project-movie-app/blob/main/static/img/ReadLikeRoryDataModel.jpeg "ReadLikeRory Database Model")
 
 
 ## ⚙️ <a name="installation"></a>Installation

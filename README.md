@@ -60,7 +60,7 @@ Similarly, users can remove books they have read if they want to re-read it. A u
 
 ## 🗂️ <a name="databasemodel"></a>Database Model
 
-![alt text](https://github.com/karengcecena/project-movie-app/blob/main/static/img/ReadLikeRoryDataModel.jpeg "ReadLikeRory Database Model")
+![alt text](https://github.com/karengcecena/ReadLikeRory/blob/main/static/img/ReadLikeRoryDataModel.jpeg "ReadLikeRory Database Model")
 
 
 ## ⚙️ <a name="installation"></a>Installation

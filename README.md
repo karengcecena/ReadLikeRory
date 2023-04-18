@@ -30,13 +30,12 @@ ReadLikeRory was created by Karen G. Cecena. Learn more about the developer on [
 **Tech Stack:**
 
 - Python
-- HTML
-- JavaScript
-- CSS
-- Bootstrap
 - Flask
-- Jinja
 - PostgreSQL
+- HTML5
+- CSS3
+- Bootstrap
+- Jinja
 
 
 ## 🔍 <a name="features"></a>Features
